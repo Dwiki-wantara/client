@@ -20,7 +20,7 @@ function Payment() {
   useEffect(() => {
     //change this to the script source you want to load, for example this is snap.js sandbox env
     const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
-    const myMidtransClientKey =  process.env.REACT_APP_MIDTRANS_CLIENT_KEY;
+    const myMidtransClientKey = "SB-Mid-client-JmIrGXGXbBJstKvh";
 
     let scriptTag = document.createElement("script");
 
@@ -35,6 +35,7 @@ function Payment() {
   }, []);
 
   const handleBuy = useMutation(async (e) => {
+
     try {
       e.preventDefault();
 
@@ -51,30 +52,39 @@ function Payment() {
       console.log(response);
 
       const token = response.data.data.token;
+
       window.snap.pay(token, {
         onSuccess: function (result) {
-       
+          navigate("/user/profile");
         },
         onPending: function (result) {
-          ;
+         
         },
         onError: function (result) {
-          
+         
         },
         onClose: function () {
-          
+         
           alert("Not Payment");
         },
       });
+
     } catch (error) {
       console.log(error);
-     
+      // navigate("/user/profile");
     }
   });
 
+  const inputFileRef = useRef(null);
+
   const onChangeFiles = (e) => {
+
+    inputFileRef.current.click();
+
     let fileInfo = e.target.files[0];
+
     setFile(fileInfo);
+    
     let reader = new FileReader();
 
     if (e.target.files.length === 0) {
@@ -88,11 +98,11 @@ function Payment() {
     reader.readAsDataURL(fileInfo);
   };
 
-  const inputFileRef = useRef(null);
 
-  const onBtnClick = () => {
-    inputFileRef.current.click();
-  };
+
+  // const onBtnClick = () => {
+  //   inputFileRef.current.click();
+  // };
   return (
   
     <div className="payment-container">
@@ -112,23 +122,23 @@ function Payment() {
         </div>
 
         <Form style={{width:"100%", margin: "20px auto"}}>
-          <Form.Group className="mb-3" controlId="accountNumber" style={{width:"50%",marginLeft:"175px", marginBottom:"20px"}}>
+          {/* <Form.Group className="mb-3" controlId="accountNumber" style={{width:"50%",marginLeft:"175px"}}>
             <Form.Control type="email" placeholder="Input your account number" className="border border-light border-3 formPayment"/>
-          </Form.Group>
+          </Form.Group> */}
 
           <div className="form-payment">
 
-        <button type="button" onClick={() => onBtnClick()} className="btn-light" style={{ width: "100%", height: "50px", fontSize: "20px"}}>
+        {/* <button type="button" onClick={() => onBtnClick()} className="btn-light" style={{ width: "100%", height: "50px", fontSize: "20px"}}>
           Attach proof of transfer{" "}
         <div style={{ float: "right", display: "inline", fontSize: "20px", }}>
         <img src={clip} alt="" />
         </div>
-          </button>
+          </button> */}
       <input onChange={(e) => onChangeFiles(e)} type="file" name="file" ref={inputFileRef} style={{ display: "none" }}
         />
-       
+        <img src={previewSrc} alt="" className="preview-src" />
       <button onClick={(e) => handleBuy.mutate(e)} type="submit" className="btnsub" style={{ height: "50px", fontSize: "16px"}}>
-        Send
+        Lakukan Pembayaran
       </button>
       </div>
 
@@ -143,3 +153,4 @@ function Payment() {
 }
 
 export default Payment;
+
