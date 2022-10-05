@@ -112,7 +112,7 @@ function Payment() {
         </div>
 
         <Form style={{width:"100%", margin: "20px auto"}}>
-          <Form.Group className="mb-3" controlId="accountNumber" style={{width:"50%",marginLeft:"175px"}}>
+          <Form.Group className="mb-3" controlId="accountNumber" style={{width:"50%",marginLeft:"175px", marginBottom:"20px"}}>
             <Form.Control type="email" placeholder="Input your account number" className="border border-light border-3 formPayment"/>
           </Form.Group>
 
