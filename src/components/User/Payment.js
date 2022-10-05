@@ -127,7 +127,7 @@ function Payment() {
       <input onChange={(e) => onChangeFiles(e)} type="file" name="file" ref={inputFileRef} style={{ display: "none" }}
         />
        
-      <button onClick={(e) => handleBuy.mutate(e)} type="submit" className="btnsub" style={{ height: "50px", fontSize: "16px"}}>
+      <button onClick={(e) => handleBuy.mutate(e)} type="submit" className="btnsub" style={{ height: "50px", fontSize: "16px", marginTop:"10px"}}>
         Send
       </button>
       </div>
