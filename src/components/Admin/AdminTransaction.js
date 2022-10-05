@@ -76,7 +76,7 @@ function ListTransaction() {
                     {item.status == "success" ?  "Not Active" :  "Active"}
                   </td>
                   <td className={ item?.status == "pending" ? "text-success" : item.status == "pending" ? "text-warning" : "text-danger" }>
-                    {item.status == "success" ? "Success" : item.status == "pending" ? "Active" : "Failed"}
+                    {item.status == "success" ? "Success" : item.status == "pending" ? "Success" : "Failed"}
                   </td>
 
                   <td>
