@@ -6,7 +6,7 @@ import { useQuery } from "react-query";
 import NavbarUser from "../Navbar/NavbarUser";
 // import AddEpisode from "../../components/AddEpisode";
 
-function AdminDetail() {
+function UserDetail() {
   let { id } = useParams();
   let { data: film } = useQuery("productCache", async () => {
     const response = await API.get("/film/" + id);
@@ -49,4 +49,4 @@ function AdminDetail() {
   );
 }
 
-export default AdminDetail;
+export default UserDetail;

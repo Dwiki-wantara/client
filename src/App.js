@@ -5,6 +5,8 @@ import { UserContext } from "./context/userContext";
 import Auth from "./pages/Auth/Auth";
 import AuthTvShows from "./pages/Auth/AuthTvShows";
 import AuthMovies from "./pages/Auth/AuthMovies";
+
+
 import User from "./pages/User/UserHome";
 import TvShowsUser from "./pages/User/UserTvShows";
 import UserFilm from "./components/User/ListFilmUser"
@@ -12,6 +14,8 @@ import MoviesUser from "./pages/User/UserMovies";
 import ProfileUser from "./components/User/Profile";
 import Payment from "./components/User/Payment";
 import DetailUser from "./components/User/UserDetail";
+
+
 import Admin from "./pages/Admin/AdminHome";
 import AdminFilm from "./components/Admin/AdminFilm"
 import AdminAddFilm from "./pages/Admin/AdminAddFilm";
@@ -88,7 +92,7 @@ function App() {
         <Route path="/user/profile" element={<ProfileUser />} />
         <Route path="/user/payment" element={<Payment />} />
         <Route path="/user/film" element={<UserFilm />} />
-        <Route path="/user/detailfilm/:id" element={<DetailUser />} />
+        <Route path="/user/detail/:id" element={<DetailUser />} />
         
       
         <Route path="/admin" element={<Admin />} />
