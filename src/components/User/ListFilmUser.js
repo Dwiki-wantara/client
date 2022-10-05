@@ -30,7 +30,7 @@ const Column = {
         <div>
         <div style={{display: "grid", gridTemplateColumns:"repeat(6,2fr)"}} >
         {film?.map((film, index) => (
-            <Link to={`/admin/detail/` + film.id} width={"100%"} style={{textAlign:"center",textDecoration:"none",color:"white"}} className="m-3"  >
+            <Link to={`/user/detail/` + film.id} width={"100%"} style={{textAlign:"center",textDecoration:"none",color:"white"}} className="m-3"  >
               <div  key={index} className={Square.Square}>
                 <div>
                   <img src={film.thumbnailFilm} alt="" style={{minHeight:"280px", maxHeight:"280px",minWidth:"100%",maxWidth:"100%"}} />
