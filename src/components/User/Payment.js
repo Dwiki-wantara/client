@@ -115,12 +115,6 @@ function Payment() {
           <span className="text-danger fw-bold">DUMBFLIX</span>
         </p>
 
-        <div>
-          <p className="text-danger fw-bold">
-            DUMBFLIX <span className="text-light">: 0423115s</span>{" "}
-          </p>
-        </div>
-
         <Form style={{width:"100%", margin: "20px auto"}}>
           {/* <Form.Group className="mb-3" controlId="accountNumber" style={{width:"50%",marginLeft:"175px"}}>
             <Form.Control type="email" placeholder="Input your account number" className="border border-light border-3 formPayment"/>
