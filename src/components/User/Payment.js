@@ -111,13 +111,13 @@ function Payment() {
           </p>
         </div>
 
-        {/* <Form style={{width:"100%", margin: "20px auto"}}>
+        <Form style={{width:"100%", margin: "20px auto"}}>
           <Form.Group className="mb-3" controlId="accountNumber" style={{width:"50%",marginLeft:"175px", marginBottom:"20px"}}>
             <Form.Control type="email" placeholder="Input your account number" className="border border-light border-3 formPayment"/>
-          </Form.Group> */}
+          </Form.Group>
 
           <div className="form-payment">
-{/* 
+
         <button type="button" onClick={() => onBtnClick()} className="btn-light" style={{ width: "100%", height: "50px", fontSize: "20px"}}>
           Attach proof of transfer{" "}
         <div style={{ float: "right", display: "inline", fontSize: "20px", }}>
@@ -125,9 +125,9 @@ function Payment() {
         </div>
           </button>
       <input onChange={(e) => onChangeFiles(e)} type="file" name="file" ref={inputFileRef} style={{ display: "none" }}
-        /> */}
+        />
        
-      <button onClick={(e) => handleBuy.mutate(e)} type="submit" className="btnsub" style={{ height: "50px", fontSize: "16px", marginTop:"10px"}}>
+      <button onClick={(e) => handleBuy.mutate(e)} type="submit" className="btnsub" style={{ height: "50px", fontSize: "16px"}}>
         Send
       </button>
       </div>
