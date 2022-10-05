@@ -72,10 +72,10 @@ function ListTransaction() {
                   <td>{index + 1}</td>
                   <td>{item.user.fullName}</td>
                   <td>{Duration(item.dueDate, item.startDate)}</td>
-                  <td className={ item?.status == "pending" ? "text-success" : "text-danger"}>
-                    {item.status == "success" ?  "Not Active" :  "Active"}
+                  <td className={ item?.status == "success" ? "text-success" : "text-danger"}>
+                    {item.status == "success" ? "Active" : "Not Active"}
                   </td>
-                  <td className={ item?.status == "pending" ? "text-success" : item.status == "pending" ? "text-warning" : "text-danger" }>
+                  <td className={ item?.status == "success" ? "text-success" : item.status == "pending" ? "text-warning" : "text-danger" }>
                     {item.status == "success" ? "Success" : item.status == "pending" ? "Success" : "Failed"}
                   </td>
 
