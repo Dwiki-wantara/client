@@ -56,9 +56,10 @@ function Profile() {
             </div>
             <div className="profile-details">
               <span style={{ fontSize: "18px", fontWeight: "bold" }}>
-              {state.user.subscribe
+              {/* {state.user.subscribe
                   ? "Active"
-                  : "Not Active"}
+                  : "Not Active"} */}
+                  Active
               </span>
               <span>Status</span>
             </div>
